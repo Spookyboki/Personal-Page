@@ -1,0 +1,23 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bojan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "gh-pages": "^2.1.1",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^10.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "run-sequence": "^2.2.1"
+  }
+}
