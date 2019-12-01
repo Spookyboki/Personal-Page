@@ -1,0 +1,35 @@
+.work {
+  padding: 120px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+
+  .box-item {
+    height: 240px;
+    width: 685px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 1369px){
+      width: 100%;
+    }
+
+    @media screen and (min-width: 1370px) and (max-width: 2069px){
+      width: 49.5%;
+    }
+  }
+
+  h2 {
+    color: $white;
+    position: absolute;
+    left: -30px;
+    bottom: 20px;
+  }
+}

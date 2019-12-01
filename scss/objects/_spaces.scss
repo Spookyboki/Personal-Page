@@ -1,0 +1,12 @@
+
+.left-space, 
+.right-space {
+    max-width: 290px;
+    width: 100%;
+    float: right;
+    border-top: 3px solid $white;
+}
+
+.mid-space {
+    min-width: 40%;
+}

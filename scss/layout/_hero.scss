@@ -1,0 +1,38 @@
+//sass-lint:disable no-ids
+.hero {
+  max-height: 1085px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 285px;
+
+  .menu-icon {
+    padding-bottom: 100px;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  h1 {
+    padding-bottom: 50px;
+  }
+
+  h4 {
+    padding-bottom: 100px;
+    
+    @include breakpoint(phone) {
+      padding-top: 50px;
+    }
+  }
+
+  .shape {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @include breakpoint(phone) {
+    padding-top: 50px;
+  }
+}

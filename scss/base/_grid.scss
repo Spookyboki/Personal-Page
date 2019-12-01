@@ -1,0 +1,74 @@
+.row:before,
+.row:after {
+  content: '';
+  display: table ;
+  clear: both;
+}
+
+.row {
+  margin: 0 -11px;
+  display: flex;
+  flex-wrap: wrap;
+  @include breakpoint (tablet) {
+    margin: 0 -5px;
+  }
+  @include breakpoint (phone) {
+    margin: 0;
+  }
+}
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  padding: 0 11px;
+  @include breakpoint (tablet) {
+    padding: 0 5px;
+  }
+  @include breakpoint (phone) {
+    padding: 0;
+  }
+}
+
+$map: (1025: 12,768: 6 ,320: 1);
+
+@each $point , $columns in $map {
+  @if $point == 320 {
+    @for $i from 1 through $columns {
+      @media (max-width: $point + px) {
+        $equ: 100% / ($columns)*$i;
+
+        .col-#{$i}-m {
+          width: $equ;
+        }
+      }
+    }
+  }@else if $point == 1025 {
+    @for $i from 1 through $columns {
+      @media (min-width: $point + px) {
+        $equ: 100% / ($columns)*$i;
+
+        .col-#{$i} {
+          width: $equ;
+        }
+
+        .offset-#{$i} {
+          margin-left: $equ;
+        }
+      }
+    }
+  }@else if $point == 768 {
+    @for $i from 1 through $columns {
+      @media (min-width: $point + px) and (max-width: 1024px) {
+        $equ: 100% / ($columns)*$i;
+
+        .col-#{$i}-t {
+          width: $equ;
+        }
+
+        .offset-#{$i}-t {
+          margin-left: $equ;
+        }
+      }
+    }
+  }
+}

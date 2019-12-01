@@ -1,0 +1,30 @@
+
+html {
+  font-family: 'Lato', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 270px;
+  margin: 0 auto;
+  @include breakpoint (tablet) {
+    max-width: 768px;
+    padding: 0 22px;
+  }
+  @include breakpoint (phone) {
+    min-width: 320px;
+    padding: 0 20px;
+  }
+}
+
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+i {
+  font-family:'FontAwesome'!important;
+}

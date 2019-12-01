@@ -1,0 +1,27 @@
+.breadcrumb {
+  font-size: 12px;
+  padding: 19px 0 17px;
+
+  li {
+    display: inline;
+
+    a {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  li+li:before {
+    padding: 4.5px;
+    content: '/\00a0';
+  }
+
+  @include breakpoint (tablet) {
+    margin-left: -35px !important;
+  }
+
+  @include breakpoint (phone) {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+.drop-item {
+  position: relative;
+
+}
+
+.rotation {
+  transform-origin: center right;
+  transform: rotate(180deg);
+}
+
+.s-magnify {
+  font-size: 29px;
+  padding: 3px 12px 23px 14px;
+
+  &:before {
+    -webkit-transform: scaleX(-1) translateY(43%);
+    transform: scaleX(-1) translateY(43%);
+  }
+
+  @include breakpoint (phone) {
+    font-size: 18px;
+    padding: 2px 12px 24px 14px;
+
+    &:before {
+      -webkit-transform: scaleX(-1) translateY(70%);
+      transform: scaleX(-1) translateY(70%);
+    }
+  }
+}
+
+.s-menu {
+  font-size: 46px;
+  @include breakpoint (phone) {
+    font-size: 35.5px;
+  }
+}
